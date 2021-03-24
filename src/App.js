@@ -99,7 +99,7 @@ class App extends React.Component {
   render() {
 
     const cardsJSX = this.state.deck.map((card, index) => {
-      return <MemoryCard key={index} symbol={card.symbol} isFlipped={card.isFlipped} pickCard={this.pickCard.bind(this, index)} />
+      return <MemoryCard key={index} symbol={card.symbol} isFlipped={card.isFlipped} pickCard={()=>this.pickCard(index)} />
     })
 
     return (
